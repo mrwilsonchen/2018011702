@@ -14,14 +14,19 @@ import java.util.ArrayList;
 
 import com.wilson.a2018011701.data.Student;
 import com.wilson.a2018011701.data.StudentScoreDAO;
+import com.wilson.a2018011701.data.StudentFileDAO;
 
 public class MainActivity extends AppCompatActivity {
-    final public static StudentScoreDAO dao = new StudentScoreDAO();
+    //final public static StudentScoreDAO dao = new StudentScoreDAO();
+    public static StudentFileDAO dao;
     ListView lv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dao = new StudentFileDAO(this);
     }
 
     @Override

@@ -35,6 +35,7 @@ public class EditActivity extends AppCompatActivity {
     {
         Student s = new Student(id, ed4.getText().toString(), Integer.valueOf(ed5.getText().toString()));
         MainActivity.dao.update(s);
+
         finish();
     }
 }
